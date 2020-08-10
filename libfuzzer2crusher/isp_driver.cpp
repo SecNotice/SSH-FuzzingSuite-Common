@@ -205,10 +205,10 @@ static void maybe_close_fd_mask() {
 
 // Define LLVMFuzzerMutate to avoid link failures for targets that use it
 // with libFuzzer's LLVMFuzzerCustomMutator.
-extern "C" size_t LLVMFuzzerMutate(uint8_t *Data, size_t Size, size_t MaxSize) {
-  assert(false && "LLVMFuzzerMutate should not be called from isp_driver");
-  return 0;
-}
+// extern "C" size_t LLVMFuzzerMutate(uint8_t *Data, size_t Size, size_t MaxSize) {
+//   assert(false && "LLVMFuzzerMutate should not be called from isp_driver");
+//   return 0;
+// }
 
 // Execute any files provided as parameters.
 static int ExecuteFilesOnyByOne(int argc, char **argv) {
